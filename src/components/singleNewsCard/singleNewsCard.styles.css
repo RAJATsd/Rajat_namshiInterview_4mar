@@ -42,3 +42,8 @@
 .pusblishing-time {
     margin-top: 1.5rem;
 }
+
+.news-redirecting-link {
+    text-decoration: none;
+    color: inherit;
+}
