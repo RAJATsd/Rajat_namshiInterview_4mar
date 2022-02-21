@@ -1,38 +1,51 @@
 import "./App.css";
-import React from "react";
-import HeaderAndInput from "./components/headerAndInput/headerAndInput.component";
-import NewsCardsAndFilters from "./components/newsCardsAndFilters/newsCardsAndFilters.component";
+import React, { useState } from "react";
+import SingleBox from "./components/singleBox/singleBox";
+import initialObjectFormer from "./formInitialObject";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchValue: "",
-      pageNumber: 1,
-    };
-  }
+const App = () => {
+  const [boxesInfo, setboxesInfo] = useState(initialObjectFormer());
+  const [clickedNumber, setClickedNumber] = useState(0);
+  const [redColoredBoxes, setRedColoredBoxes] = useState([]);
+  const boxArray = [...Array(16)].map((_, index) => index + 1);
 
-  handleInputChange = (event) =>
-    this.setState({ ...this.state, searchValue: event.target.value });
+  const onBoxClick = (boxNumber) => {
+    if (!boxesInfo[boxNumber].clickedNumber) {
+      const newBoxesInfo = { ...boxesInfo };
+      newBoxesInfo[boxNumber].clickedNumber = clickedNumber + 1;
+      setboxesInfo(newBoxesInfo);
+      setClickedNumber(clickedNumber + 1);
+    }
 
-  changePageNumber = (actionType) =>
-    this.setState({
-      ...this.state,
-      pageNumber: actionType === "increment" ? this.state.pageNumber + 1 : 1,
-    });
+    const newColorBoxes = [...redColoredBoxes];
+    if (redColoredBoxes.length < 2) {
+      newColorBoxes.push(boxNumber);
+    } else {
+      newColorBoxes[0] = newColorBoxes[1];
+      newColorBoxes[1] = boxNumber;
+    }
 
-  render() {
-    return (
-      <div className="App">
-        <HeaderAndInput handleInputChange={this.handleInputChange} />
-        <NewsCardsAndFilters
-          searchValue={this.state.searchValue}
-          pageNumber={this.state.pageNumber}
-          changePageNumber={this.changePageNumber}
-        />
+    setRedColoredBoxes(newColorBoxes);
+  };
+
+  return (
+    <div className="App">
+      <div className="all-boxes-grid">
+        {boxArray.map((singleEle) => (
+          <SingleBox
+            key={singleEle}
+            boxNumber = {singleEle}
+            clickedNumber={boxesInfo?.[singleEle]?.clickedNumber}
+            isRed={
+              redColoredBoxes[0] === singleEle ||
+              redColoredBoxes[1] === singleEle
+            }
+            onClick={onBoxClick}
+          />
+        ))}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
