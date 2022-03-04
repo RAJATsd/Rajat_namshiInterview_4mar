@@ -2,11 +2,7 @@
     box-sizing: border-box;
 }
 
-.all-boxes-grid {
-    width: 50%;
-    min-width: 500px;
+.page-container {
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-top: 3rem;
+    width: 100%;
 }

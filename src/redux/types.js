@@ -1,0 +1,14 @@
+const types = {
+    products : {
+        FETCH_ALL_PRODUCTS_SUCCESS : 'FETCH_ALL_PRODUCTS_SUCCESS',
+        FETCH_ALL_PRODUCTS_FAILURE : 'FETCH_ALL_PRODUCTS_FAILURE',
+        FETCH_ALL_PRODUCTS_START : 'FETCH_ALL_PRODUCTS_START'  
+    },
+    cart : {
+        ADD_ONE__CART_ITEM : 'ADD_ONE__CART_ITEM',
+        REMOVE_ONE_CART_ITEM : 'REMOVE_ONE_CART_ITEM',
+        CLEAR_ALL_CART_ITEMS : 'CLEAR_ALL_CART_ITEMS' 
+    }
+}
+
+export default types;

@@ -1,0 +1,34 @@
+.cart-item-container { 
+    margin: 3rem 0; 
+}
+
+.cart-item-info-and-count-changer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cart-item-count-changer {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.cart-item-count-changer button {
+    border: none;
+    background: rgb(248, 214, 210);
+    cursor: pointer;
+}
+
+.cart-item-count-changer span {
+    margin: 0.5rem;
+}
+
+.cart-item-price-and-total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

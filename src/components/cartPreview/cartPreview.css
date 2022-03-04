@@ -1,0 +1,8 @@
+.cart-preview-container {
+    flex: 0.2;
+    height: 100vh;
+    padding: 2rem 1rem;
+    border-left: 1px solid black;
+}
+
+

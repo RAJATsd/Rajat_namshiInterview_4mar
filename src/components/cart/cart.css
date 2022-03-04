@@ -1,0 +1,25 @@
+.cart-top-section {
+    display: flex;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clear-cart-button {
+    border: none;
+    background: none;
+    color: red;
+    cursor: pointer;
+}
+
+.cart-bottom-section {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: 2px black dashed;
+}
+
+.cart-bottom-section .total-price {
+    flex-shrink: 0;
+}

@@ -1,0 +1,14 @@
+.redirect-link-holder {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.redirect-link {
+    text-decoration: none;
+    color: green;
+    border: 2px solid blue;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: auto;
+}

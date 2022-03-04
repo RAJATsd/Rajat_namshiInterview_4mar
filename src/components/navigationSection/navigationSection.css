@@ -1,0 +1,16 @@
+.navigation-section-container {
+    flex: 0.2;
+    height: 100vh;
+    border-right: 1px solid black;
+    padding: 2rem;
+    padding-right: 0;
+}
+
+.categories-container {
+    margin-top: 2rem;
+}
+
+.categories-container .single-category {
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(213,213,213,1) 0%, rgba(252,255,210,1) 0%, rgba(133,148,7,1) 100%);
+    padding: 1rem;
+}
