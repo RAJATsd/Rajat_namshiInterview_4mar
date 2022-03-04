@@ -2,7 +2,6 @@ import "./App.css";
 import React from "react";
 import NavigationSection from "./components/navigationSection/navigationSection";
 import ProductsList from "./components/products-list/products-list";
-import Cart from "./components/cart/cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartPage from "./components/cartPage/cartPage";
 import CartPreview from "./components/cartPreview/cartPreview";
